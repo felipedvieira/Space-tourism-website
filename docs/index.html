@@ -13,25 +13,30 @@
 </head>
   
 <body>
-    <div class="header">
-      <img src="assets\shared\logo.svg" alt="">
-      <span class="line"></span>
-      <nav class="nav">
-        <ul class="list">
-          <li><a href="#index.html" class="active-page textPreset-8"><b>00</b> Home</a></li>
-          <li><a href="destination-europa.html" class="textPreset-8"><b>01</b> Destination</a></li>
-          <li><a href="crew.html" class="textPreset-8"><b>02</b> Crew</a></li>
-          <li><a href="technology-capsule.html" class="textPreset-8"><b>03</b> Technology</a></li>
+
+    <nav class="header">
+        <ul class="ul-nav">
+            <li><img src="assets\shared\logo.svg" alt="" class=icon;"></li>
+            <li class="hideOnMobile"><a href="#"><b>00</b> HOME</a></li>
+            <li class="hideOnMobile"><a href="#"><b>01</b> PLANETS</a></li>
+            <li class="hideOnMobile"><a href="#"><b>02</b> CREW</a></li>
+            <li class="hideOnMobile"><a href="#"><b>03</b> TECHNOLOGY</a></li>
+            <li onclick=openSideBar() class="hideOnDesktop align-li"><a href="#"><img src="assets/shared/icon-hamburger.svg" alt="" style="width: 24px; height: 21px;"></a></li>
         </ul>
-        
-      </nav>
-    </div>
+        <ul class="sidebar">
+            <li onclick=closeSideBar()><a href="#"><img src="assets\shared\icon-close.svg" alt="" class="close-icon"></a></li>
+            <li><a href="#"><b>00</b> HOME</a></li>
+            <li><a href="#"><b>01</b> PLANETS</a></li>
+            <li><a href="#"><b>02</b>CREW</a></li>
+            <li><a href="#"><b>03</b> TECHNOLOGY</a></li>
+        </ul>
+    </nav>
     <div class="main">
       <div class="mainContent">
         <div class="main-texts">
-          <p class="textPreset-5 blue-300 uppercase paddingB-16px">So, you want to travel to</p>
-          <p class="textPreset-1 white uppercase paddingB-32px">Space</p>
-          <p class="textPreset-9 blue-300"> Let’s face it; if you want to go to space, you might as well genuinely go to 
+          <p class="blue-300 uppercase paddingB-16px">So, you want to travel to</p>
+          <p class="white uppercase paddingB-32px">Space</p>
+          <p class="blue-300"> Let’s face it; if you want to go to space, you might as well genuinely go to 
     outer space and not hover kind of on the edge of it. Well sit back, and relax 
     because we’ll give you a truly out of this world experience!</p>
         </div>
@@ -40,6 +45,16 @@
       <div class="hover-button"></div>
     </div>
 
-  
+    <script>
+        function openSideBar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        
+        function closeSideBar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
   </body>
 </html>

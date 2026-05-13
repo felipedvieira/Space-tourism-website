@@ -9,55 +9,6 @@ body,html{
     
 }
 
-.textPreset-1{
-    font-family: "Bellefair", serif;
-    letter-spacing: 0px;
-    font-size: 144px;
-}
-
-.textPreset-2{
-    font-family: "Bellefair", serif;
-    letter-spacing: 0px;
-    font-size: 100px;
-}
-
-.textPreset-3{
-    font-family: "Bellefair", serif;
-    letter-spacing: 0px;
-    font-size: 56px;
-}
-
-.textPreset-4{
-    font-family: "Bellefair", serif;
-    letter-spacing: 0px;
-    font-size: 32px;
-}
-
-.textPreset-5{
-    font-family: "Barlow Condensed", sans-serif;
-    letter-spacing: 4px;
-    font-size: 28px;
-}
-.textPreset-6{
-    font-family: "Barlow Condensed", sans-serif;
-    letter-spacing: 0px;
-    font-size: 28px;
-}
-.textPreset-7{
-    font-family: "Barlow Condensed", sans-serif;
-    letter-spacing: 2px;
-    font-size: 14px;
-}
-.textPreset-8{
-    font-family: "Barlow Condensed", sans-serif;
-    letter-spacing: 4px;
-    font-size: 16px;
-}
-.textPreset-9{
-    font-family: "Barlow Condensed", sans-serif;
-    letter-spacing: 0px;
-    font-size: 18px;
-}
 
 .uppercase{
     text-transform: uppercase;
@@ -88,19 +39,131 @@ body,html{
   font-style: normal;
 }
 
+nav ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+}
 
-@media screen and (max-width: 400px){  /*MOBILE*/
+nav li:first-child{
+    margin-right:auto;
+}
+
+
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color: white;
+}
+
+
+@media screen and (max-width: 425px){  /*MOBILE*/
 
      body{
-    background-image:url("assets/home/background-home-mobile.jpg");
-    background-repeat: no-repeat;
-    max-width: 1440px;
-    max-height: 900px;
+        background-image:url("assets/home/background-home-mobile.jpg");
+        background-size: cover;
     }
+    
+
+    .sidebar{
+        height: 100vh;
+        max-width: 350px;
+        width: 75%;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        transition: 0.3s ease;
+        background: rgba(11, 13, 23, 0.67);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.2px);
+        -webkit-backdrop-filter: blur(7.2px);
+    }
+
+    .siderabar li, a{
+        width: 100%;
+    }
+
+    .hideOnMobile{
+        display: none;
+    }
+
+    nav:first-child{
+        margin-right: auto;
+    }
+
+    nav{
+        padding:10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    li{
+        list-style: none;
+        text-decoration: none;
+        text-underline-offset: 40px;
+    }
+
+    
+.align-li{
+    height: 100%;
+    align-self: center;
+}
+
+    a{
+        text-decoration: none;
+        color: white;
+
+        
+    }
+
+    a:hover{
+        cursor: pointer;
+        text-decoration: underline rgba(255, 255, 255, 0.445);
+    }
+
+    .close-icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+}
+
+.sidebar ul, .sidebar li{
+    height: 40px;
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    text-align: start;
 
 }
 
-@media screen and (min-width:401px) and (max-width: 780px){  /*TABLET*/
+.sidebar li:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+} 
+
+    .main-content{
+        width: 100%;;
+    }
+    .main-texts{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width:425px) and (max-width: 780px){  /*TABLET*/
 
      body{
     background-image:url("assets/home/background-home-tablet.jpg");
@@ -120,39 +183,19 @@ body,html{
         
     }
 
+    .sidebar{
+        display:none;
+    }
+
+    .hideOnDesktop{
+        display: none;
+    }
+
     a:hover{
         cursor: pointer;
         text-decoration: underline rgba(255, 255, 255, 0.445);
     }
 
-
-    .header{
-        width: 100%;
-        height: 96px;
-        display: flex;
-        align-items: center;
-        margin-left: 32px;
-
-    }
-
-    .nav{
-        display: flex;
-        padding-left: 32px;
-        width: 85%;
-    }
-
-    .list{
-        display: flex;
-        width: 100%;
-        height: 96px;
-        background-color: rgba(255, 255, 255, 0.11);
-        align-items: center;
-        justify-content: space-around;
-        font-family: "Barlow Condensed", sans-serif;
-        text-transform: uppercase;
-        font-size: 16px;
-
-    }
 
     .main{
         height: auto;
@@ -188,40 +231,12 @@ body,html{
     background-repeat: no-repeat;
     }
 
-    .nav{
-        display: flex;
-        width: 60%;
-        flex-direction: column;
-    }
-    .header{
-        height: 136px;
-        width: 90%;
-        display: flex;
-        align-items: center;
-        margin-left: 64px;
-    }
-    .line{
-        height: 2px;
-        width: 25%;
-        margin-left: 64px;
-        border-bottom: 2px solid rgb(119, 119, 119);
-    }
-
     li{
         list-style: none;
         text-decoration: none;
         text-underline-offset: 40px;
     }
     
-    .list{
-        display: flex;
-        height: 96px;
-        background-color: rgba(255, 255, 255, 0.11);
-        align-items: center;
-        justify-content: space-around;
-        font-family: "Barlow Condensed", sans-serif;
-        text-transform: uppercase;
-    }
 
     a{
         text-decoration: none;
@@ -295,5 +310,13 @@ body,html{
 
     .paddingB-32px{
         padding-bottom: 32px;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .hideOnDesktop{
+        display: none;
     }
 }
